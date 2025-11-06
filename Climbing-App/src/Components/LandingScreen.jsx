@@ -14,11 +14,29 @@ function LandingScreen() {
         />
         <div className="centered">
           <h1>Welcome To Climb Buddy!</h1>
-          <h2>Sign Up Here</h2>
+          <h2>Sign Up Below</h2>
           <Link to="/signup">
             <button className="get-started">Get Started</button>
           </Link>
         </div>
+      </div>
+        <div className='testimonial-title'>
+        <h2>Here are some Reviews!</h2>
+        <div className="flex-container">
+        <div className="flex-item">John Smith
+          <p>This is such a great app!</p>
+        </div>
+                <div className="flex-item">Joe Smith
+          <p>This is such a great app!</p>
+        </div>
+                <div className="flex-item">Joanne Smith
+          <p>This is such a great app!</p>
+        </div>
+                <div className="flex-item">Booker Grass
+          <p>It's alright I guess</p>
+        </div>
+        </div>
+
       </div>
     </div>
   );

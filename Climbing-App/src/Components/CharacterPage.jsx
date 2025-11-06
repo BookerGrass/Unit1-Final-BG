@@ -1,10 +1,14 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "./NavBar";
+import { Link } from "react-router-dom";
+import './Main.css'
+
 
 function CreateBuddy() {
 
   const [selectedImage, setSelectedImage] = useState("cat");
-
+  
 
   const imageOptions = {
     cat: "https://www.catbehaviourist.com/wp-content/uploads/2015/11/cat-in-tree-1.jpg",
@@ -17,21 +21,27 @@ function CreateBuddy() {
     setSelectedImage(e.target.value);
   };
 
+
+
   return (
     <div>
       <Navbar />
-
+    <div className='flex-item'>
       <h1>Create Your Buddy</h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+        Here you can pick what your Lil Guy will look like!
       </p>
 
-      <label htmlFor="animalDropdown">Choose an animal:</label>
+      <label htmlFor="animalDropdown">Choose an animal: </label>
       <select id="animalDropdown" onChange={handleChange} value={selectedImage}>
         <option value="cat">Cat</option>
         <option value="dog">Dog</option>
         <option value="lizard">Lizard</option>
       </select>
+            <Link to ="/home">
+        <button className="save-buddy">Save Your Buddy</button>
+      </Link>
+    </div>
 
       <div className="image-container">
         <img
@@ -41,9 +51,11 @@ function CreateBuddy() {
         />
       </div>
 
-      <button className="save-buddy">Save Your Buddy</button>
-    </div>
+</div>
+
   );
 }
 
 export default CreateBuddy;
+
+//Gotta figure out how to send selected picture to home page
