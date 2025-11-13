@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from './NavBar';
 import './Main.css'
+import { useLocation } from 'react-router-dom';
 
 
 function getRandomStringFromArray(arr) {
@@ -60,6 +61,8 @@ function HomePage() {
       setCounts(newCounts);
     }
   };
+  const location = useLocation();
+  const image = location.state?.image;
 
   return (
     <div>
@@ -109,12 +112,15 @@ function HomePage() {
         <h2>Positive Quote of the Day</h2>
         <p>{currentString}</p>
       </div>
-
-      <img
-        className='smile'
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Smiley.svg/1200px-Smiley.svg.png"
-        alt="smiley"
-      />
+      {image ? (
+        <img
+          src={image}
+          alt="Your Buddy"
+          style={{ width: "250px", borderRadius: "12px" }}
+        />
+      ) : (
+        <p>No buddy selected yet.</p>
+      )}
     </div>
     </div>
   );

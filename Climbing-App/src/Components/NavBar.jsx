@@ -1,30 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
 
-const Navbar = () => {
+export default function NavBar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <nav className="navbar">
       <div className="navbar-left">
-        <Link to="/" className="logo">
-          Climb Buddy
-        </Link>
+        <Link to="/" className="logo">ClimbBuddy</Link>
       </div>
+      <button
+        className="menu-toggle"
+        aria-label="Toggle menu"
+        onClick={() => setIsOpen((s) => !s)}
+      >
+        ☰
+      </button>
       <div className="navbar-center">
-        <ul className="nav-links">
-          <li>
-            <Link to="/home">Home</Link>
-          </li>
-          <li>
-            <Link to="/create">Create A Buddy</Link>
-          </li>
-          <li>
-            <Link to="/signUp">Sign Up</Link>
-          </li>
+      <div className="navbar-right">
+        <ul
+          className="nav-links"
+          style={{ display: isOpen ? "flex" : undefined }}
+        >
+          <li><Link to="/home" onClick={() => setIsOpen(false)}>Home</Link></li>
+          <li><Link to="/signup" onClick={() => setIsOpen(false)}>Sign Up</Link></li>
+          <li><Link to="/create" onClick={() => setIsOpen(false)}>Create Buddy</Link></li>
+          <li><Link to="/about" onClick={() => setIsOpen(false)}>About Us</Link></li>
         </ul>
+      </div>
       </div>
     </nav>
   );
-};
-
-export default Navbar;
+}

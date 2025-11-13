@@ -20,3 +20,26 @@
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
 }
+@media (max-width: 768px) {
+  .centered h1 {
+    font-size: 1.5rem;
+  }
+  .centered h2 {
+    font-size: 1rem;
+  }
+  .get-started {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .centered {
+    width: 90%;
+    padding: 0.8rem;
+  }
+  .flex-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}

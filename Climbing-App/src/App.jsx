@@ -5,6 +5,7 @@ import HomePage from "./Components/HomePage";
 import CreateBuddy from "./Components/CharacterPage";
 import SignUp from "./Components/SignUpPage";
 import LandingScreen from "./Components/LandingScreen";
+import AboutPage from "./Components/AboutPage";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/home" element={<HomePage />} />
         <Route path="/create" element={<CreateBuddy />} />
         <Route path="/signUp" element={<SignUp />} />
+        <Route path="/about" element={<AboutPage />} />
       </Routes>
     </Router>
   );

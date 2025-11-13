@@ -8,6 +8,7 @@ import './Main.css'
 function CreateBuddy() {
 
   const [selectedImage, setSelectedImage] = useState("cat");
+  const navigate = useNavigate();
   
 
   const imageOptions = {
@@ -22,39 +23,42 @@ function CreateBuddy() {
   };
 
 
+  const handleSave = () => {
+    navigate("/home", { state: { image: imageOptions[selectedImage] } });
+  };
 
-  return (
+
+
+ return (
     <div>
       <Navbar />
-    <div className='flex-item'>
-      <h1>Create Your Buddy</h1>
-      <p>
-        Here you can pick what your Lil Guy will look like!
-      </p>
+      <div className="flex-item">
+        <h1>Create Your Buddy</h1>
+        <p>Here you can pick what your Lil Guy will look like!</p>
 
-      <label htmlFor="animalDropdown">Choose an animal: </label>
-      <select id="animalDropdown" onChange={handleChange} value={selectedImage}>
-        <option value="cat">Cat</option>
-        <option value="dog">Dog</option>
-        <option value="lizard">Lizard</option>
-      </select>
-            <Link to ="/home">
-        <button className="save-buddy">Save Your Buddy</button>
-      </Link>
-    </div>
+        <label htmlFor="animalDropdown">Choose an animal: </label>
+        <select id="animalDropdown" onChange={handleChange} value={selectedImage}>
+          <option value="cat">Cat</option>
+          <option value="dog">Dog</option>
+          <option value="lizard">Lizard</option>
+        </select>
+
+        <button onClick={handleSave} className="save-buddy">
+          Save Your Buddy
+        </button>
+      </div>
 
       <div className="image-container">
         <img
           src={imageOptions[selectedImage]}
           alt={selectedImage}
-          className="climb-image"
+          className="buddy-image"
         />
       </div>
-
-</div>
-
+    </div>
   );
 }
+
 
 export default CreateBuddy;
 

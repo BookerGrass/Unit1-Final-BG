@@ -5,6 +5,9 @@ import { Link } from "react-router-dom";
 
 function LandingScreen() {
   return (
+
+         
+
     <div>
       <Navbar />
       <div className="home-image">
@@ -39,6 +42,7 @@ function LandingScreen() {
 
       </div>
     </div>
+
   );
 }
 
