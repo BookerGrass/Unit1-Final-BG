@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "./NavBar";
+import Footer from "./Footer";
 import { Link } from "react-router-dom";
 import './Main.css'
 
@@ -55,6 +56,7 @@ function CreateBuddy() {
           className="buddy-image"
         />
       </div>
+      <Footer/>
     </div>
   );
 }

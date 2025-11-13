@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from './NavBar';
+import Footer from './Footer';
 import './Main.css'
 import { useLocation } from 'react-router-dom';
 
@@ -122,6 +123,7 @@ function HomePage() {
         <p>No buddy selected yet.</p>
       )}
     </div>
+    <Footer/>
     </div>
   );
 }

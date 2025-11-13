@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./NavBar";
+import Footer from "./Footer";
 import "./LandingScreen.css";
 import { Link } from "react-router-dom";
 
@@ -39,8 +40,8 @@ function LandingScreen() {
           <p>It's alright I guess</p>
         </div>
         </div>
-
       </div>
+      <Footer/>
     </div>
 
   );

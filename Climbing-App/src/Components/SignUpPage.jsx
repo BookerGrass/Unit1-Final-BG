@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import Navbar from "./NavBar"
+import Footer from "./Footer";
 import { Link } from "react-router-dom";
 import './Main.css'
 
@@ -31,7 +32,8 @@ function SignUp(){
                   </Link>
                   
             </form>
-            <img className= "signup-image" src = "https://climbsoill.com/wp-content/uploads/2024/07/gravity-lab-climb-so-ill-st-charles-768x768.webp"/>                
+            <img className= "signup-image" src = "https://climbsoill.com/wp-content/uploads/2024/07/gravity-lab-climb-so-ill-st-charles-768x768.webp"/>   
+            <Footer/>             
         </div>
 
     )
