@@ -1,26 +1,33 @@
-import React from "react"
+import React, { useState } from "react"
 import Navbar from "./NavBar"
 import { Link } from "react-router-dom";
 import './Main.css'
 
 
 function SignUp(){
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const usernameValid = username.trim() !== "";
+  const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  const passwordValid = password.length >= 6;
+  const isFormValid = usernameValid && emailValid && passwordValid;    
     return(
         <div>
             <Navbar />
             <h1 className="sign-up">Sign Up Below</h1>
             <form className= "flex-item">
                   <label htmlFor="username">Username: </label>
-                  <input type="text" id="username" name="username" required/>
+                  <input type="text" id="username" name="username" value={username} onChange={(e) => setUsername(e.target.value)} required/>
                   <br/>
                   <label htmlFor="email">Email: </label>
-                  <input type="email" id="email" name="email" required/>
+                  <input type="email" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
                   <br/>
                   <label htmlFor="password">Password: </label>
-                  <input type="password" id="password" name="password" required/>
+                  <input type="password" id="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} required/>
                   <br/>
-                  <Link to="/create">
-                  <button className = "submit">Submit</button>
+                  <Link to={isFormValid ? "/create" : "#"}>
+                  <button className = "submit" disabled={!isFormValid}>Submit</button>
                   </Link>
                   
             </form>
@@ -32,4 +39,3 @@ function SignUp(){
 
 export default SignUp;
 
-//need to make sure that form actually has validation and button does not work unless input is correct

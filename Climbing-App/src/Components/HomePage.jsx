@@ -129,4 +129,3 @@ function HomePage() {
 export default HomePage;
 
 
-//gotta figure out how to import and display photo of buddy from characterpage.jsx

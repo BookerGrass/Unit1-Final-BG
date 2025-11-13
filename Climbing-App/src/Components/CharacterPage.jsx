@@ -62,4 +62,3 @@ function CreateBuddy() {
 
 export default CreateBuddy;
 
-//Gotta figure out how to send selected picture to home page
