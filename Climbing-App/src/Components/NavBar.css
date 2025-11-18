@@ -44,7 +44,7 @@
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .navbar {
     flex-wrap: wrap;
     align-items: center;
