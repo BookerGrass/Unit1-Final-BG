@@ -9,8 +9,6 @@
   font-family: Arial, Helvetica, sans-serif;
   width: 100%;
   box-sizing: border-box;
-  position: relative;
-  z-index: 10;
 }
 
 .navbar-left .logo {
@@ -28,12 +26,6 @@
   margin: 0;
   padding: 0;
   font-size: 1.1rem;
-  align-items: right;
-}
-
-.navbar-center .nav-links li {
-  margin: 0;
-  align-items: right;
 }
 
 .navbar-center .nav-links a {
@@ -41,7 +33,6 @@
   text-decoration: none;
   padding: 0.25rem 0.5rem;
   display: block;
-  align-items: right;
 }
 
 .menu-toggle {
@@ -64,11 +55,11 @@
     display: block;
     margin-left: auto;
   }
+
   .navbar-center .nav-links {
     display: none;
     flex-direction: column;
     width: 100%;
-    gap: 0;
     margin-top: 0.75rem;
     background: rgba(0, 0, 0, 0.9);
     padding: 0.5rem;
@@ -85,6 +76,7 @@
     padding: 0.5rem 0.75rem;
   }
 }
+
 .navbar-center .nav-links a:hover {
   background: rgba(255, 255, 255, 0.06);
   border-radius: 4px;
