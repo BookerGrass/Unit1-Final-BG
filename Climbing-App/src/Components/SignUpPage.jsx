@@ -15,8 +15,8 @@ function SignUp() {
   return (
     <div>
       <Navbar />
-      <h1 className="sign-up">Sign Up Below</h1>
       <form className="flex-item">
+        <h1>Sign Up Below</h1>
         <label htmlFor="username">Username: </label>
         <input
           type="text"

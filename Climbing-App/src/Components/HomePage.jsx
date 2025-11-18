@@ -110,7 +110,8 @@ function HomePage() {
           <img
             src={image}
             alt="Your Buddy"
-            style={{ width: "250px", borderRadius: "12px" }}
+            style={{ width: "250px", height: "auto", borderRadius: "12px" }}
+            className="buddy-image"
           />
         ) : (
           <p>No buddy selected yet.</p>
