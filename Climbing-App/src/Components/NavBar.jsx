@@ -8,7 +8,9 @@ function NavBar() {
   return (
     <nav className="navbar">
       <div className="navbar-left">
-        <Link to="/" className="logo">ClimbBuddy</Link>
+        <Link to="/" className="logo">
+          ClimbBuddy
+        </Link>
       </div>
       <button
         className="menu-toggle"
@@ -18,17 +20,33 @@ function NavBar() {
         ☰
       </button>
       <div className="navbar-center">
-      <div className="navbar-right">
-        <ul
-          className="nav-links"
-          style={{ display: isOpen ? "flex" : undefined }}
-        >
-          <li><Link to="/home" onClick={() => setIsOpen(false)}>Home</Link></li>
-          <li><Link to="/signup" onClick={() => setIsOpen(false)}>Sign Up</Link></li>
-          <li><Link to="/create" onClick={() => setIsOpen(false)}>Create Buddy</Link></li>
-          <li><Link to="/about" onClick={() => setIsOpen(false)}>About Us</Link></li>
-        </ul>
-      </div>
+        <div className="navbar-right">
+          <ul
+            className="nav-links"
+            style={{ display: isOpen ? "flex" : undefined }}
+          >
+            <li>
+              <Link to="/home" onClick={() => setIsOpen(false)}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/signup" onClick={() => setIsOpen(false)}>
+                Sign Up
+              </Link>
+            </li>
+            <li>
+              <Link to="/create" onClick={() => setIsOpen(false)}>
+                Create Buddy
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" onClick={() => setIsOpen(false)}>
+                About Us
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
   );

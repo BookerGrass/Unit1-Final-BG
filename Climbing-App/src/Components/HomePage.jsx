@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
-import Navbar from './NavBar';
-import Footer from './Footer';
-import './Main.css'
-import { useLocation } from 'react-router-dom';
-
+import React, { useState } from "react";
+import Navbar from "./NavBar";
+import Footer from "./Footer";
+import "./Main.css";
+import { useLocation } from "react-router-dom";
 
 function getRandomStringFromArray(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
@@ -11,23 +10,21 @@ function getRandomStringFromArray(arr) {
 
 function HomePage() {
   const quotes = [
-    'Go You',
-    'Have a low gravity day',
-    'Just walking into the gym is a success',
-    'Your current project is a future warmup',
+    "Go You",
+    "Have a low gravity day",
+    "Just walking into the gym is a success",
+    "Your current project is a future warmup",
   ];
 
   const [currentString, setCurrentString] = useState(() =>
-    getRandomStringFromArray(quotes)
+    getRandomStringFromArray(quotes),
   );
 
-
   const [inProgressTasks, setInProgressTasks] = useState([
-    'Send a Climb',
-    'Try a climb outside of your normal tag range',
-    'Stretch before climbing',
+    "Send a Climb",
+    "Try a climb outside of your normal tag range",
+    "Stretch before climbing",
   ]);
-
 
   const [counts, setCounts] = useState([0, 0, 0]);
 
@@ -36,7 +33,6 @@ function HomePage() {
   const maxCount = 5;
 
   const increment = (index) => {
-
     const newCounts = [...counts];
 
     if (newCounts[index] < maxCount) {
@@ -45,9 +41,7 @@ function HomePage() {
       if (newCounts[index] === maxCount) {
         const completedTask = inProgressTasks[index];
 
-
         setAchievedTasks((prev) => [...prev, completedTask]);
-
 
         const updatedTasks = inProgressTasks.filter((_, i) => i !== index);
         const updatedCounts = newCounts.filter((_, i) => i !== index);
@@ -57,7 +51,6 @@ function HomePage() {
 
         return;
       }
-
 
       setCounts(newCounts);
     }
@@ -77,57 +70,55 @@ function HomePage() {
           <h1>Welcome Back</h1>
         </div>
       </div>
-<div className='flex-container'>
-    <div className='flex-item'>
-      <h2>In Progress</h2>
-      <ol>
-        {inProgressTasks.length === 0 ? (
-          <p>All tasks completed!</p>
-        ) : (
-          inProgressTasks.map((task, index) => (
-            <li key={task}>
-              {task} — {counts[index]}/5
-              <button
-                onClick={() => increment(index)}
-                disabled={counts[index] >= maxCount}
-              >
-                +1
-              </button>
-            </li>
-          ))
-        )}
-      </ol>
-</div>
-<div className='flex-item'>
-      <h2>Achievements</h2>
-      <ol>
-        {achievedTasks.length === 0 ? (
-          <p>No achievements yet</p>
-        ) : (
-          achievedTasks.map((task, index) => <li key={task}>{task}</li>)
-        )}
-      </ol>
-</div>
+      <div className="flex-container">
+        <div className="flex-item">
+          <h2>In Progress</h2>
+          <ol>
+            {inProgressTasks.length === 0 ? (
+              <p>All tasks completed!</p>
+            ) : (
+              inProgressTasks.map((task, index) => (
+                <li key={task}>
+                  {task} — {counts[index]}/5
+                  <button
+                    onClick={() => increment(index)}
+                    disabled={counts[index] >= maxCount}
+                  >
+                    +1
+                  </button>
+                </li>
+              ))
+            )}
+          </ol>
+        </div>
+        <div className="flex-item">
+          <h2>Achievements</h2>
+          <ol>
+            {achievedTasks.length === 0 ? (
+              <p>No achievements yet</p>
+            ) : (
+              achievedTasks.map((task, index) => <li key={task}>{task}</li>)
+            )}
+          </ol>
+        </div>
 
-      <div className='flex-item'>
-        <h2>Positive Quote of the Day</h2>
-        <p>{currentString}</p>
+        <div className="flex-item">
+          <h2>Positive Quote of the Day</h2>
+          <p>{currentString}</p>
+        </div>
+        {image ? (
+          <img
+            src={image}
+            alt="Your Buddy"
+            style={{ width: "250px", borderRadius: "12px" }}
+          />
+        ) : (
+          <p>No buddy selected yet.</p>
+        )}
       </div>
-      {image ? (
-        <img
-          src={image}
-          alt="Your Buddy"
-          style={{ width: "250px", borderRadius: "12px" }}
-        />
-      ) : (
-        <p>No buddy selected yet.</p>
-      )}
-    </div>
-    <Footer/>
+      <Footer />
     </div>
   );
 }
 
 export default HomePage;
-
-

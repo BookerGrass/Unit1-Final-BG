@@ -6,9 +6,6 @@ import { Link } from "react-router-dom";
 
 function LandingScreen() {
   return (
-
-         
-
     <div>
       <Navbar />
       <div className="home-image">
@@ -24,26 +21,29 @@ function LandingScreen() {
           </Link>
         </div>
       </div>
-        <div className='testimonial-title'>
+      <div className="testimonial-title">
         <h2>Here are some Reviews!</h2>
         <div className="flex-container">
-        <div className="flex-item">John Smith
-          <p>This is such a great app!</p>
-        </div>
-                <div className="flex-item">Joe Smith
-          <p>This is such a great app!</p>
-        </div>
-                <div className="flex-item">Joanne Smith
-          <p>This is such a great app!</p>
-        </div>
-                <div className="flex-item">Booker Grass
-          <p>It's alright I guess</p>
-        </div>
+          <div className="flex-item">
+            John Smith
+            <p>This is such a great app!</p>
+          </div>
+          <div className="flex-item">
+            Joe Smith
+            <p>This is such a great app!</p>
+          </div>
+          <div className="flex-item">
+            Joanne Smith
+            <p>This is such a great app!</p>
+          </div>
+          <div className="flex-item">
+            Booker Grass
+            <p>It's alright I guess</p>
+          </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
-
   );
 }
 

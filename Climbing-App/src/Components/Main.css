@@ -1,8 +1,7 @@
-
 .flex-container {
   display: flex;
-  flex-wrap: wrap; 
-  gap: 2rem; 
+  flex-wrap: wrap;
+  gap: 2rem;
   margin: 2rem 0;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -17,7 +16,6 @@
   font-size: large;
 }
 
-
 ol {
   padding-left: 1.5rem;
 }
@@ -25,7 +23,6 @@ ol {
 li {
   margin: 0.5rem 0;
 }
-
 
 button {
   margin-left: 1rem;
@@ -49,7 +46,6 @@ button:hover:not(:disabled) {
   background-color: #45a049;
 }
 
-
 .home-image {
   position: relative;
   margin-bottom: 2rem;
@@ -62,7 +58,6 @@ button:hover:not(:disabled) {
   border-radius: 12px;
 }
 
-
 .centered {
   position: absolute;
   top: 50%;
@@ -71,20 +66,16 @@ button:hover:not(:disabled) {
   color: white;
   font-size: 2rem;
   font-weight: bold;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
-  
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
-
 
 .quotes {
   margin-top: 2rem;
   padding: 1rem;
   background-color: #fff8e1;
   border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
-
 
 .buddy-image {
   display: block;
@@ -94,25 +85,25 @@ button:hover:not(:disabled) {
   object-fit: contain;
 }
 
-.image-container img{
+.image-container img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%; 
+  width: 50%;
 }
-.signup-image{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.signup-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
-.smile{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.smile {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
-.sign-up{
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+.sign-up {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .footer {
   position: fixed;
@@ -163,14 +154,14 @@ button:hover:not(:disabled) {
     flex: 1 1 100%;
     font-size: 1rem;
   }
-  .signup-image{
+  .signup-image {
     width: 100%;
   }
-  .about-text{
+  .about-text {
     font-size: 1rem;
   }
 }
-@media (max-width: 400px){
+@media (max-width: 400px) {
   .flex-container {
     flex-direction: column;
     gap: 1rem;
@@ -180,10 +171,10 @@ button:hover:not(:disabled) {
     flex: 1 1 100%;
     font-size: 1rem;
   }
-  .signup-image{
+  .signup-image {
     width: 100%;
   }
-  .about-text{
+  .about-text {
     font-size: 1rem;
   }
-} 
+}

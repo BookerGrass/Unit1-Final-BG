@@ -3,34 +3,28 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "./NavBar";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
-import './Main.css'
-
+import "./Main.css";
 
 function CreateBuddy() {
-
   const [selectedImage, setSelectedImage] = useState("cat");
   const navigate = useNavigate();
-  
 
   const imageOptions = {
     cat: "https://www.catbehaviourist.com/wp-content/uploads/2015/11/cat-in-tree-1.jpg",
     dog: "https://gripped.com/wp-content/uploads/2018/03/Biscuit-Dog.jpg",
-    lizard: "https://images.pexels.com/photos/17020788/pexels-photo-17020788/free-photo-of-a-lizard-climbing-on-the-rock.jpeg",
+    lizard:
+      "https://images.pexels.com/photos/17020788/pexels-photo-17020788/free-photo-of-a-lizard-climbing-on-the-rock.jpeg",
   };
-
 
   const handleChange = (e) => {
     setSelectedImage(e.target.value);
   };
 
-
   const handleSave = () => {
     navigate("/home", { state: { image: imageOptions[selectedImage] } });
   };
 
-
-
- return (
+  return (
     <div>
       <Navbar />
       <div className="flex-item">
@@ -38,7 +32,11 @@ function CreateBuddy() {
         <p>Here you can pick what your Lil Guy will look like!</p>
 
         <label htmlFor="animalDropdown">Choose an animal: </label>
-        <select id="animalDropdown" onChange={handleChange} value={selectedImage}>
+        <select
+          id="animalDropdown"
+          onChange={handleChange}
+          value={selectedImage}
+        >
           <option value="cat">Cat</option>
           <option value="dog">Dog</option>
           <option value="lizard">Lizard</option>
@@ -56,11 +54,9 @@ function CreateBuddy() {
           className="buddy-image"
         />
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
 
-
 export default CreateBuddy;
-
