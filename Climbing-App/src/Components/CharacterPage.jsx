@@ -4,8 +4,16 @@ import Navbar from "./NavBar";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
 import "./Main.css";
+import confetti from "canvas-confetti";
 
 function CreateBuddy() {
+  const triggerConfetti = () => {
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 },
+    });
+  };
   const [selectedImage, setSelectedImage] = useState("cat");
   const navigate = useNavigate();
 
@@ -17,6 +25,7 @@ function CreateBuddy() {
   };
 
   const handleChange = (e) => {
+    triggerConfetti();
     setSelectedImage(e.target.value);
   };
 
