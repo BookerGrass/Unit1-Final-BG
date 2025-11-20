@@ -8,7 +8,9 @@ function AboutPage() {
   return (
     <div>
       <Navbar />
-      <h1 className="title">About Us</h1>
+      <div className="flex-item">
+        <h1 className="title">About Us</h1>
+      </div>
       <div className="about-content">
         <img className="about-image" src={Picture} alt="Me and My Partner" />
         <p className="about-text">
