@@ -32,6 +32,7 @@ function HomePage() {
   const [achievedTasks, setAchievedTasks] = useState([]);
 
   const maxCount = 5;
+
   const triggerConfetti = () => {
     confetti({
       particleCount: 100,
@@ -39,6 +40,7 @@ function HomePage() {
       origin: { y: 0.6 },
     });
   };
+
   const increment = (index) => {
     const newCounts = [...counts];
 
@@ -108,7 +110,6 @@ function HomePage() {
             )}
           </ol>
         </div>
-
         <div className="flex-item">
           <h2>Positive Quote of the Day</h2>
           <p>{currentString}</p>

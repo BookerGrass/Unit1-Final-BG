@@ -8,12 +8,9 @@ function AboutPage() {
   return (
     <div>
       <Navbar />
-
       <h1 className="title">About Us</h1>
-
       <div className="about-content">
         <img className="about-image" src={Picture} alt="Me and My Partner" />
-
         <p className="about-text">
           <p className="about-text-first">Climbing</p> is a huge part of me and
           my partner's lives, but naturally, like any skill, we are at different
@@ -32,7 +29,6 @@ function AboutPage() {
           <br /> -Booker + Bri
         </p>
       </div>
-
       <Footer />
     </div>
   );

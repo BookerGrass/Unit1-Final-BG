@@ -14,7 +14,9 @@ function CreateBuddy() {
       origin: { y: 0.6 },
     });
   };
+
   const [selectedImage, setSelectedImage] = useState("cat");
+
   const navigate = useNavigate();
 
   const imageOptions = {
@@ -39,7 +41,6 @@ function CreateBuddy() {
       <div className="flex-item">
         <h1 className="title">Create Your Buddy</h1>
         <p>Here you can pick what your Lil Guy will look like!</p>
-
         <label htmlFor="animalDropdown">Choose an animal: </label>
         <select
           id="animalDropdown"
@@ -50,12 +51,10 @@ function CreateBuddy() {
           <option value="dog">Dog</option>
           <option value="lizard">Lizard</option>
         </select>
-
         <button onClick={handleSave} className="save-buddy">
           Save Your Buddy
         </button>
       </div>
-
       <div className="image-container">
         <img
           src={imageOptions[selectedImage]}
