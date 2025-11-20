@@ -37,7 +37,7 @@ function CreateBuddy() {
     <div>
       <Navbar />
       <div className="flex-item">
-        <h1>Create Your Buddy</h1>
+        <h1 className="title">Create Your Buddy</h1>
         <p>Here you can pick what your Lil Guy will look like!</p>
 
         <label htmlFor="animalDropdown">Choose an animal: </label>
