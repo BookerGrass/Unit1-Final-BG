@@ -3,6 +3,7 @@ import Navbar from "./NavBar";
 import Footer from "./Footer";
 import "./Main.css";
 import { useLocation } from "react-router-dom";
+import confetti from "canvas-confetti";
 
 function getRandomStringFromArray(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
@@ -31,7 +32,13 @@ function HomePage() {
   const [achievedTasks, setAchievedTasks] = useState([]);
 
   const maxCount = 5;
-
+  const triggerConfetti = () => {
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 },
+    });
+  };
   const increment = (index) => {
     const newCounts = [...counts];
 
@@ -40,7 +47,7 @@ function HomePage() {
 
       if (newCounts[index] === maxCount) {
         const completedTask = inProgressTasks[index];
-
+        triggerConfetti();
         setAchievedTasks((prev) => [...prev, completedTask]);
 
         const updatedTasks = inProgressTasks.filter((_, i) => i !== index);
