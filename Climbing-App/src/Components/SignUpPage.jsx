@@ -12,6 +12,7 @@ function SignUp() {
   const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   const passwordValid = password.length >= 6;
   const isFormValid = usernameValid && emailValid && passwordValid;
+
   return (
     <div>
       <Navbar />
