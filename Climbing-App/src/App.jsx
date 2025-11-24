@@ -1,15 +1,15 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/NavBar";
 import HomePage from "./Components/HomePage";
 import CreateBuddy from "./Components/CharacterPage";
 import SignUp from "./Components/SignUpPage";
 import LandingScreen from "./Components/LandingScreen";
 import AboutPage from "./Components/AboutPage";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<LandingScreen />} />
         <Route path="/home" element={<HomePage />} />
@@ -17,7 +17,7 @@ function App() {
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/about" element={<AboutPage />} />
       </Routes>
-    </Router>
+    </HashRouter>
   );
 }
 
